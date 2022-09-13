@@ -8,6 +8,7 @@
 <table>
     <tr><th>Id</th><th>Name</th><th>Surname</th></tr>
 <?php
+echo 'Привет, ' . htmlspecialchars($_GET["name"]) . '!';
 $mysqli = new mysqli("db", "user", "password", "appDB");
 $result = $mysqli->query("SELECT * FROM users");
 foreach ($result as $row){
